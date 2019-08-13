@@ -1,0 +1,40 @@
+html {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+body {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
+.scrollable {
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .background:nth-child(odd) {
+  background-color: #dbfffa;
+}
+
+main .background:nth-child(even) {
+  background-color: #ffeff7;
+}

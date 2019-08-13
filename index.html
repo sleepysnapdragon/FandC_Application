@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header>
+      <div id="navbarcontainer">
+        <div id="navbarbuttons">
+          <a class="active" href="#start">Start</a>
+          <a href="#aboutme">About me</a>
+          <a href="#moreaboutme">More about me</a>
+          <a href="#whyfandc">Why F&C</a>
+          <a href="#links">Links</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar" id="myBar"></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="scrollable">
+        <div class="background" id="start">
+          <h1>Hi, I'm Gillian!</h1>
+          <p>I'm an aspiring developer currently based in Rome</p>
+        </div>
+        <div class="background" id="aboutme">
+          <h1>Something about me</h1>
+        </div>
+        <div class="background" id="moreaboutme">
+          <h1>Something more about me</h1>
+        </div>
+        <div class="background" id="whyfandc">
+          <h1>Why I'm applying</h1>
+        </div>
+        <div class="background" id="links">
+          <h1>External links</h1>
+        </div>
+        <div class="background" id="contact">
+          <h1>Contact (scrap this?)</h1>
+        </div>
+      </div>
+    </main>
   </body>
   <script type="text/javascript" src="./js/index.js"></script>
 </html>
