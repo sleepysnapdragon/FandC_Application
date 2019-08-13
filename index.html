@@ -7,6 +7,7 @@
       href="https://fonts.googleapis.com/css?family=Lato|Noto+Sans+JP&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="./images/icon.png" />
   </head>
   <body>
     <header>
@@ -25,28 +26,32 @@
       </div>
     </header>
     <main>
-      <div class="scrollable">
-        <div class="background" id="start">
-          <h1>Hi, I'm Gillian!</h1>
-          <p>I'm an aspiring developer currently based in Rome</p>
-        </div>
-        <div class="background" id="aboutme">
-          <h1>Something about me</h1>
-        </div>
-        <div class="background" id="moreaboutme">
-          <h1>Something more about me</h1>
-        </div>
-        <div class="background" id="whyfandc">
-          <h1>Why I'm applying</h1>
-        </div>
-        <div class="background" id="links">
-          <h1>External links</h1>
-        </div>
-        <div class="background" id="contact">
-          <h1>Contact (scrap this?)</h1>
-        </div>
-      </div>
+      <section class="background" id="start">
+        <h1>Hi, I'm Gillian!</h1>
+        <p>I'm an aspiring developer currently based in Rome</p>
+      </section>
+      <section class="background" id="aboutme">
+        <h1>Something about me</h1>
+      </section>
+      <section class="background" id="moreaboutme">
+        <h1>Something more about me</h1>
+        <div id="map"></div>
+      </section>
+      <section class="background" id="whyfandc">
+        <h1>Why I'm applying</h1>
+      </section>
+      <section class="background" id="links">
+        <h1>External links</h1>
+      </section>
+      <section class="background" id="contact">
+        <h1>Contact (scrap this?)</h1>
+      </section>
     </main>
   </body>
   <script type="text/javascript" src="./js/index.js"></script>
+  <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCR4UJ5LJHtwbUcMJd1Doff1OrttwE1Ghc&callback=initMap"
+  ></script>
 </html>
