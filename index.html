@@ -7,16 +7,21 @@
       href="https://fonts.googleapis.com/css?family=Lato|Noto+Sans+JP&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="icon" href="./images/icon.png" />
+    <title>Gillian Yeomans</title>
   </head>
-  <body>
+  <body onload="auto()">
     <header>
       <div id="navbarcontainer">
         <div id="navbarbuttons">
           <a class="active" href="#start">Start</a>
           <a href="#aboutme">About me</a>
-          <a href="#moreaboutme">More about me</a>
           <a href="#whyfandc">Why F&C</a>
+          <a href="#moreaboutme">More about me</a>
           <a href="#links">Links</a>
           <a href="#contact">Contact</a>
         </div>
@@ -32,16 +37,38 @@
       </section>
       <section class="background" id="aboutme">
         <h1>Something about me</h1>
-      </section>
-      <section class="background" id="moreaboutme">
-        <h1>Something more about me</h1>
         <div id="map"></div>
       </section>
       <section class="background" id="whyfandc">
         <h1>Why I'm applying</h1>
       </section>
+      <section class="background" id="moreaboutme">
+        <h1>Something more about me</h1>
+
+        <div id="image-carousel">
+          <canvas id="canvas" height="600" width="800"></canvas>
+          <button class="button-left" onclick="previous()">&#10094;</button>
+          <button class="button-right" onclick="next()">&#10095;</button>
+          <button class="dot" onclick="showX(0)"></button>
+          <button class="dot" onclick="showX(1)"></button>
+          <button class="dot" onclick="showX(2)"></button>
+          <i class="material-icons" onclick="auto()">play_arrow</i>
+          <i class="material-icons" onclick="stopAuto()">pause</i>
+        </div>
+      </section>
       <section class="background" id="links">
         <h1>External links</h1>
+        <div id="logos">
+          <a href="https://github.com/sleepysnapdragon/FandC_Application"
+            ><img src="./images/logos/GitHub-Mark-120px-plus.png" alt=""
+          /></a>
+          <a href="https://www.freecodecamp.org/sleepysnapdragon"
+            ><img src="./images/logos/BW_fcc.png" alt=""
+          /></a>
+          <a href="https://www.codewars.com/users/sleepysnapdragon"
+            ><img src="./images/logos/codewars.svg" alt=""
+          /></a>
+        </div>
       </section>
       <section class="background" id="contact">
         <h1>Contact (scrap this?)</h1>
@@ -49,6 +76,7 @@
     </main>
   </body>
   <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="./js/carousel.js"></script>
   <script
     async
     defer

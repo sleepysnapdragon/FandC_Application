@@ -11,9 +11,11 @@
   font-family: "Noto Sans JP", sans-serif;
   overflow: hidden;
   background-color: #f1f1f1;
+  /*
+  background-image: url(../../clouds2.jpg);
+  background-size: cover; */
   padding: 60px 10px; /* this to change on scroll */
-  transition: 0.5s;
-
+  transition: padding 0.5s;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
