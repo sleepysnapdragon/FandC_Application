@@ -47,13 +47,23 @@
 
         <div id="image-carousel">
           <canvas id="canvas" height="600" width="800"></canvas>
-          <button class="button-left" onclick="previous()">&#10094;</button>
-          <button class="button-right" onclick="next()">&#10095;</button>
-          <button class="dot" onclick="showX(0)"></button>
-          <button class="dot" onclick="showX(1)"></button>
-          <button class="dot" onclick="showX(2)"></button>
-          <i class="material-icons" onclick="auto()">play_arrow</i>
-          <i class="material-icons" onclick="stopAuto()">pause</i>
+          <i class="material-icons" id="previous-button" onclick="previous()"
+            >navigate_before</i
+          >
+          <i class="material-icons" id="next-button" onclick="next()"
+            >navigate_next</i
+          >
+          <div class="dots">
+            <button class="dot" onclick="showX(0)"></button>
+            <button class="dot" onclick="showX(1)"></button>
+            <button class="dot" onclick="showX(2)"></button>
+          </div>
+          <i class="material-icons" id="play-button" onclick="auto()"
+            >play_arrow</i
+          >
+          <i class="material-icons" id="pause-button" onclick="stopAuto()"
+            >pause</i
+          >
         </div>
       </section>
       <section class="background" id="links">

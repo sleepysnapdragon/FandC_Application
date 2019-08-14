@@ -63,6 +63,90 @@ main .background:nth-child(even) {
 }
 
 /* image carousel */
+#image-carousel {
+  height: 600px;
+  width: 800px;
+  position: relative;
+  padding: 0;
+}
+
+#canvas {
+  padding: 0;
+  margin: 0;
+}
+
+#next-button {
+  right: 0;
+}
+
+#previous-button,
+#next-button {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 50px;
+}
+
+#previous-button:hover {
+  background-color: rgba(140, 140, 140, 0.8);
+  transition: 0.6s ease;
+  border-radius: 0 8px 8px 0;
+}
+
+#next-button:hover {
+  background-color: rgba(140, 140, 140, 0.8);
+  transition: 0.6s ease;
+  border-radius: 8px 0 0 8px;
+}
+
+#play-button:hover,
+#pause-button:hover {
+  background-color: rgba(140, 140, 140, 0.8);
+  transition: 0.6s ease;
+  border-radius: 8px;
+}
+
+.dot:hover {
+  background-color: rgba(140, 140, 140, 0.8);
+  transition: 0.6s ease;
+  border: none;
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, -50%);
+}
+
+.dot {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  margin: 6px;
+  border: none;
+}
+
+#play-button {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 50px;
+}
+
+#pause-button {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 50px;
+}
+
 .active i {
   background-color: black;
 }
@@ -96,5 +180,42 @@ i {
 }
 
 #logos img:hover {
-  transform: scale(1.2);
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
