@@ -51,7 +51,9 @@ function initMap() {
   var rome = { lat: 41.906314, lng: 12.496595 };
   var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 10,
-    center: rome
+    center: rome,
+    streetViewControl: false,
+    mapTypeControl: false
   });
 
   var marker = new google.maps.Marker({

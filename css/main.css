@@ -18,10 +18,12 @@ h2,
 h3,
 h4 {
   font-family: "Montserrat", sans-serif;
+  color: #333333;
 }
 
 p {
   font-family: "Lato", sans-serif;
+  color: #333333;
 }
 
 main {
@@ -52,14 +54,71 @@ main .background:nth-child(even) {
   background-size: cover;
 }
 
-#aboutme {
-  background-color: #ffeff7;
+#start h1 {
+  margin-top: 120px;
 }
 
 #map {
-  height: 400px;
+  height: 300px;
+  width: 400px;
+  margin: 20px;
+}
+
+#aboutme {
+  /* background-color: #ffeff7; */
+  background-image: url(../../watercolour-background2.jpg);
+  background-size: cover;
+}
+
+#aboutme h1 {
+  margin: 0 0 30px 0;
+  font-size: 3rem;
+}
+
+#aboutmecontainer {
+  display: flex;
+  flex-flow: row;
+  height: 100vh;
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
+  margin: 120px 0 0 0;
+}
+
+#aboutmetext {
   width: 40%;
-  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#aboutmeimageleft {
+  width: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#aboutmeimageright {
+  width: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#top-left-pic:hover,
+#bottom-right-pic:hover {
+  transform: scale(1.2) rotate(15deg);
+}
+
+#bottom-left-pic:hover,
+#top-right-pic:hover {
+  transform: scale(1.2) rotate(-15deg);
+}
+
+#aboutmecontainer div img {
+  width: 80%;
+  height: auto;
+  padding: 20px;
 }
 
 /* image carousel */
