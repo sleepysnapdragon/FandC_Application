@@ -31,7 +31,7 @@
   font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
-  width: 10%; /* need to change if you add more buttons */
+  width: 20%; /* need to change if you add more buttons */
 }
 
 #navbarbuttons a:hover {
@@ -41,6 +41,12 @@
 
 #navbarbuttons a.active {
   text-decoration: underline;
+}
+
+#open-nav-button {
+  font-size: 36px;
+  padding: 12px;
+  display: none;
 }
 
 .progress-container {

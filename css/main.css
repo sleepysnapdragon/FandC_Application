@@ -39,7 +39,6 @@ main {
   align-items: center;
 }
 
-/*
 main .background:nth-child(odd) {
   background-color: #dbfffa;
 }
@@ -47,15 +46,22 @@ main .background:nth-child(odd) {
 main .background:nth-child(even) {
   background-color: #ffeff7;
 }
-*/
 
+/*
 #start {
   background-image: url(../../watercolour-background.jpg);
   background-size: cover;
 }
+*/
 
 #start h1 {
   margin-top: 120px;
+  font-size: 80px;
+  font-family: "Roboto Mono", monospace;
+}
+
+#start p {
+  font-size: 20px;
 }
 
 #map {
@@ -65,14 +71,10 @@ main .background:nth-child(even) {
 }
 
 #aboutme {
-  /* background-color: #ffeff7; */
+  /*
   background-image: url(../../watercolour-background2.jpg);
   background-size: cover;
-}
-
-#aboutme h1 {
-  margin: 0 0 30px 0;
-  font-size: 3rem;
+  */
 }
 
 #aboutmecontainer {
@@ -86,9 +88,18 @@ main .background:nth-child(even) {
 }
 
 #aboutmetext {
-  width: 40%;
-  padding: 20px;
+  width: 60%;
+  padding: 20px 40px 20px 20px;
   text-align: center;
+}
+
+#aboutmetext h1 {
+  margin: 0 0 30px 0;
+  font-size: 3rem;
+}
+
+#aboutmetext p {
+  text-align: justify;
 }
 
 #aboutmeimageleft {
@@ -96,6 +107,7 @@ main .background:nth-child(even) {
   text-align: center;
   display: flex;
   flex-direction: column;
+  margin: 10px;
 }
 
 #aboutmeimageright {
@@ -103,16 +115,19 @@ main .background:nth-child(even) {
   text-align: center;
   display: flex;
   flex-direction: column;
+  margin: 10px;
 }
 
 #top-left-pic:hover,
 #bottom-right-pic:hover {
   transform: scale(1.2) rotate(15deg);
+  transition: 0.3s ease;
 }
 
 #bottom-left-pic:hover,
 #top-right-pic:hover {
   transform: scale(1.2) rotate(-15deg);
+  transition: 0.3s ease;
 }
 
 #aboutmecontainer div img {
