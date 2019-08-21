@@ -16,9 +16,9 @@ pics[2] = new Image();
 
 function auto() {
   //get images
-  pics[0].src = "./images/accollo.jpg";
+  pics[0].src = "./images/accollo1.jpg";
   pics[1].src = "./images/disagio.jpg";
-  pics[2].src = "./images/nuno.jpg";
+  pics[2].src = "./images/accollo2.jpg";
 
   //begin display when first image is ready
   pics[0].onload = function() {
