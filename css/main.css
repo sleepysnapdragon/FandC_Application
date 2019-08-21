@@ -40,7 +40,7 @@ main {
 }
 
 main .background:nth-child(odd) {
-  background-color: #dbfffa;
+  background-color: #d1107a;
 }
 
 main .background:nth-child(even) {
@@ -57,7 +57,8 @@ main .background:nth-child(even) {
 #start h1 {
   margin-top: 120px;
   font-size: 80px;
-  font-family: "Roboto Mono", monospace;
+  color: #ffffff;
+  /* font-family: "Roboto Mono", monospace; */
 }
 
 #start p {
