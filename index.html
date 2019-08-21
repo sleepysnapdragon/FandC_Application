@@ -15,15 +15,15 @@
     <link rel="icon" href="./images/icon.png" />
     <title>Gillian Yeomans</title>
   </head>
-  <body onload="auto()">
+  <body>
     <header>
       <div id="navbarcontainer">
         <div id="navbarbuttons">
-          <a class="active" href="#start">Start</a>
-          <a href="#aboutme">About me</a>
-          <a href="#whyfandc">Why F&C</a>
-          <a href="#moreaboutme">More about me</a>
-          <a href="#links">Links</a>
+          <a class="active" href="#start">START</a>
+          <a href="#aboutme">ABOUT ME</a>
+          <a href="#whyfandc">WHY F&C</a>
+          <a href="#moreaboutme">MORE ABOUT ME</a>
+          <a href="#links">LINKS</a>
           <i class="material-icons" id="open-nav-button" onclick="openNavList()"
             >view_headline</i
           >
@@ -42,14 +42,14 @@
         <div id="aboutmecontainer">
           <div id="aboutmeimageleft">
             <img id="top-left-pic" src="./images/polaroid2.jpg" alt="" />
-            <img id="bottom-left-pic" src="./images/polaroid2.jpg" alt="" />
+            <img id="bottom-left-pic" src="./images/polaroid4.jpg" alt="" />
           </div>
           <div id="aboutmeimageright">
-            <img id="top-right-pic" src="./images/polaroid1.jpg" alt="" />
+            <img id="top-right-pic" src="./images/polaroid3.jpg" alt="" />
             <img id="bottom-right-pic" src="./images/polaroid1.jpg" alt="" />
           </div>
           <div id="aboutmetext">
-            <h1>Something about me</h1>
+            <h1>SOMETHING ABOUT ME</h1>
             <p>
               On 17th December 1989 the very first episode of The Simpsons was
               broadcast. And a lesser-known fact is that over on the other side
@@ -87,60 +87,95 @@
         </div>
       </section>
       <section class="background" id="whyfandc">
-        <h1>Why I'm applying</h1>
-        <p>
-          I've been interested in coding for a long time but it's only recently
-          that I've really believed that this could be my career.
-        </p>
-        <p>
-          A long, long, time ago... around the Y2K... I taught myself HTML with
-          an <a href="https://mcli.cogdogblog.com/tut/"> online tutorial</a> (I
-          found it again &#128513;!). I enjoyed that and I made a couple of
-          little websites for myself but I never knew where to go afterwards.
-        </p>
-        <p>
-          Later, when thinking about what to study at university, I was tempted
-          by Computer Science. I remember meeting an older girl who was at
-          university and mentioning this, and she looked at me like I was mad...
-          Computer Science was just for weirdos!
-        </p>
-      </section>
-      <section class="background" id="moreaboutme">
-        <h1>Something more about me</h1>
-        <div id="image-carousel">
-          <canvas id="canvas" height="600" width="800"></canvas>
-          <i class="material-icons" id="previous-button" onclick="previous()"
-            >navigate_before</i
-          >
-          <i class="material-icons" id="next-button" onclick="next()"
-            >navigate_next</i
-          >
-          <div class="dots">
-            <button class="dot" onclick="showX(0)"></button>
-            <button class="dot" onclick="showX(1)"></button>
-            <button class="dot" onclick="showX(2)"></button>
+        <div id="why-container">
+          <h1>WHY I'M APPLYING</h1>
+          <div id="why-text-top">
+            <p>
+              I've been interested in coding for a long time but it's only
+              recently that I've really believed that this could be my career. A
+              long, long, time ago... around Y2K... I taught myself HTML with an
+              online tutorial. I enjoyed that and I made a couple of little
+              websites for myself but I never knew where to go afterwards. When
+              I started work I did a range of tasks: administrative, analytical,
+              communications... But I always found that I enjoyed the logical
+              problem-solving the most. I became an expert at stretching
+              Microsoft Excel to within an inch of its life. After leaving that
+              job, and while I've been teaching English, I've also been slowly
+              learning to code. Founders and Coders appeals to me because of its
+              peer-led structure, which I think encourages whilst encouraging
+              individuals' hard-work and ownership of their learning: you're not
+              paying someone to tell you the answer.
+            </p>
           </div>
-          <i class="material-icons" id="play-button" onclick="auto()"
-            >play_arrow</i
-          >
-          <i class="material-icons" id="pause-button" onclick="stopAuto()"
-            >pause</i
-          >
+          <div id="why-img"></div>
+          <p>An ASCII image of Colosseum that I coded</p>
         </div>
       </section>
+      <section class="background" id="moreaboutme">
+        <div id="somethingmorecontainer">
+          <div id="somethingmoretext">
+            <h1>MORE ABOUT ME</h1>
+            <p class="quote">
+              <em
+                >"Images and videos of domestic cats make up some of the most
+                viewed content on the web"</em
+              ><br />Wikipedia: Cats and the Internet
+            </p>
+
+            <p>I have two cats</p>
+          </div>
+          <div id="carousel">
+            <div id="image-carousel">
+              <canvas id="canvas" width="640px" height="480px"></canvas>
+              <i
+                class="material-icons"
+                id="previous-button"
+                onclick="previous()"
+                >navigate_before</i
+              >
+              <i class="material-icons" id="next-button" onclick="next()"
+                >navigate_next</i
+              >
+              <div class="dots">
+                <span class="dot" onclick="showX(0)"></span>
+                <span class="dot" onclick="showX(1)"></span>
+                <span class="dot" onclick="showX(2)"></span>
+              </div>
+              <i class="material-icons" id="play-button" onclick="auto()"
+                >play_arrow</i
+              >
+              <i class="material-icons" id="pause-button" onclick="stopAuto()"
+                >pause</i
+              >
+            </div>
+          </div>
+        </div>
+        <!--- <div id="map"></div> --->
+      </section>
       <section class="background" id="links">
-        <h1>External links</h1>
-        <div id="map"></div>
-        <div id="logos">
-          <a href="https://github.com/sleepysnapdragon/FandC_Application"
-            ><img src="./images/logos/GitHub-Mark-120px-plus.png" alt=""
-          /></a>
-          <a href="https://www.freecodecamp.org/sleepysnapdragon"
-            ><img src="./images/logos/BW_fcc.png" alt=""
-          /></a>
-          <a href="https://www.codewars.com/users/sleepysnapdragon"
-            ><img src="./images/logos/codewars.svg" alt=""
-          /></a>
+        <div id="links-container">
+          <div id="logos">
+            <a href="https://github.com/sleepysnapdragon/FandC_Application"
+              ><img src="./images/logos/GitHub-Mark-120px-plus.png" alt=""
+            /></a>
+            <a href="https://www.freecodecamp.org/sleepysnapdragon"
+              ><img src="./images/logos/BW_fcc.png" alt=""
+            /></a>
+            <a href="https://www.codewars.com/users/sleepysnapdragon"
+              ><img src="./images/logos/codewars.svg" alt=""
+            /></a>
+          </div>
+          <svg
+            id="wave"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+          >
+            <path
+              fill="#ffffff"
+              fill-opacity="1"
+              d="M0,32L17.1,42.7C34.3,53,69,75,103,90.7C137.1,107,171,117,206,101.3C240,85,274,43,309,58.7C342.9,75,377,149,411,176C445.7,203,480,181,514,197.3C548.6,213,583,267,617,266.7C651.4,267,686,213,720,192C754.3,171,789,181,823,176C857.1,171,891,149,926,133.3C960,117,994,107,1029,96C1062.9,85,1097,75,1131,101.3C1165.7,128,1200,192,1234,213.3C1268.6,235,1303,213,1337,202.7C1371.4,192,1406,192,1423,192L1440,192L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z"
+            ></path>
+          </svg>
         </div>
       </section>
     </main>

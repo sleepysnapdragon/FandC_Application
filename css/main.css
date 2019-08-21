@@ -40,11 +40,11 @@ main {
 }
 
 main .background:nth-child(odd) {
-  background-color: #d1107a;
+  background-color: #fea49f;
 }
 
 main .background:nth-child(even) {
-  background-color: #ffeff7;
+  background-color: #fae0df;
 }
 
 /*
@@ -58,11 +58,12 @@ main .background:nth-child(even) {
   margin-top: 120px;
   font-size: 80px;
   color: #ffffff;
-  /* font-family: "Roboto Mono", monospace; */
+  font-family: "Roboto Mono", monospace;
 }
 
 #start p {
   font-size: 20px;
+  color: #ffffff;
 }
 
 #map {
@@ -90,17 +91,20 @@ main .background:nth-child(even) {
 
 #aboutmetext {
   width: 60%;
-  padding: 20px 40px 20px 20px;
+  padding: 20px 50px 20px 20px;
   text-align: center;
 }
 
 #aboutmetext h1 {
-  margin: 0 0 30px 0;
-  font-size: 3rem;
+  margin: 0 0 50px 0;
+  font-size: 4rem;
+  text-align: right;
+  color: #101358;
 }
 
 #aboutmetext p {
   text-align: justify;
+  color: #101358;
 }
 
 #aboutmeimageleft {
@@ -134,15 +138,98 @@ main .background:nth-child(even) {
 #aboutmecontainer div img {
   width: 80%;
   height: auto;
+  padding: 15px;
+}
+
+/* why i'm applying */
+#why-container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+#whyfandc h1 {
+  font-size: 4rem;
+  color: #ffffff;
+  padding-top: 100px;
+  text-align: center;
+  margin: 0;
+}
+
+#whyfandc p {
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  padding: 5px;
+}
+
+#why-text-top p {
+  color: #ffffff;
+  font-size: 1.1rem;
+  display: inline;
+}
+
+#why-text-top {
+  column-count: 3;
+  column-gap: 5%;
+  padding: 2%;
+  text-align: justify;
+}
+
+#why-img {
+  height: 40vh;
+  width: 100%;
+  background-image: url(../images/ascii.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*something more about me section*/
+
+#somethingmorecontainer {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: no-wrap;
+}
+
+#somethingmoretext {
   padding: 20px;
 }
 
+#somethingmoretext h1 {
+  font-size: 4rem;
+  color: #101358;
+}
+
+#somethingmoretext p {
+  color: #101358;
+}
+
+.quote {
+  padding-bottom: 10px;
+}
+
+#somethingmoretext em {
+  font-style: italic;
+}
+
 /* image carousel */
+#carousel {
+  padding: 20px;
+}
+
 #image-carousel {
-  height: 600px;
-  width: 800px;
+  height: 480px;
+  width: 640px;
   position: relative;
-  padding: 0;
+  padding: 0px;
 }
 
 #canvas {
@@ -158,7 +245,7 @@ main .background:nth-child(even) {
 #next-button {
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate();
   color: #ffffff;
   font-size: 50px;
 }
@@ -191,33 +278,32 @@ main .background:nth-child(even) {
 .dots {
   position: absolute;
   left: 50%;
-  bottom: 0%;
+  bottom: 3%;
   transform: translate(-50%, -50%);
 }
 
 .dot {
   border-radius: 50%;
-  height: 15px;
-  width: 15px;
+  height: 12px;
+  width: 12px;
   display: inline-block;
   margin: 6px;
   border: none;
+  background-color: #ffffff;
 }
 
 #play-button {
   position: absolute;
-  bottom: 0%;
-  right: 0%;
-  transform: translate(-50%, -50%);
+  bottom: 5%;
+  right: 3%;
   color: #ffffff;
   font-size: 50px;
 }
 
 #pause-button {
   position: absolute;
-  bottom: 0%;
-  left: 0%;
-  transform: translate(-50%, -50%);
+  bottom: 5%;
+  left: 3%;
   color: #ffffff;
   font-size: 50px;
 }
@@ -226,12 +312,13 @@ main .background:nth-child(even) {
   background-color: black;
 }
 
-button,
+span,
 i {
   cursor: pointer;
 }
 
 /* external links */
+
 #logos {
   display: flex;
   flex-flow: row;
@@ -293,4 +380,15 @@ i {
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
   }
+}
+
+#links-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  height: 100vh;
+  width: 100vw;
+}
+
+#wave {
 }

@@ -10,7 +10,7 @@
 #navbarbuttons {
   font-family: "Noto Sans JP", sans-serif;
   overflow: hidden;
-  background-color: #bda5ad;
+  background-color: #101358;
   /*
   background-image: url(../../clouds2.jpg);
   background-size: cover; */
@@ -23,7 +23,7 @@
 
 #navbarbuttons a {
   float: left;
-  color: black;
+  color: #d4cfc3;
   text-align: center;
   margin: auto;
   padding: 12px;
