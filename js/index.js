@@ -1,6 +1,5 @@
 window.onscroll = function() {
   scrollFunction();
-  //progressBar();
   navLinkActivate();
 };
 
@@ -32,7 +31,6 @@ function navLinkActivate() {
     if (isElemInView(sections[i])) {
       links[i].classList.add("active");
       var scrolled = 10 + i * 20;
-      console.log(scrolled);
       document.getElementById("myBar").style.width = scrolled + "%";
     } else {
       links[i].classList.remove("active");

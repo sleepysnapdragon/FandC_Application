@@ -22,7 +22,6 @@ h4 {
 
 p {
   font-family: "Roboto", sans-serif;
-  color: #333333;
 }
 
 main {
@@ -64,12 +63,6 @@ main .background:nth-child(even) {
   font-size: 24px;
 }
 
-#map {
-  height: 300px;
-  width: 400px;
-  margin: 20px;
-}
-
 /* about me section */
 
 #aboutmecontainer {
@@ -92,7 +85,7 @@ main .background:nth-child(even) {
 #aboutmetext h1 {
   margin: 0 0 50px 0;
   font-size: 4rem;
-  text-align: center;
+  text-align: left;
   color: #101358;
 }
 
@@ -135,56 +128,6 @@ main .background:nth-child(even) {
   padding: 15px;
 }
 
-/* why i'm applying */
-#why-container {
-  display: flex;
-  flex-flow: column;
-  height: 100%;
-  justify-content: space-between;
-}
-
-#whyfandc h1 {
-  font-size: 4rem;
-  color: #ffffff;
-  padding-top: 100px;
-  text-align: center;
-  margin: 0;
-}
-
-#whyfandc p {
-  text-align: center;
-  color: #ffffff;
-  margin: 0;
-  padding: 5px;
-}
-
-#why-text-top p {
-  color: #ffffff;
-  font-size: 1.1rem;
-  display: inline;
-}
-
-#why-text-top {
-  column-count: 3;
-  column-gap: 5%;
-  padding: 2%;
-  text-align: justify;
-  letter-spacing: 1px;
-  line-height: 1.3;
-}
-
-#why-img {
-  height: 40vh;
-  width: 100%;
-  background-image: url(../images/ascii.png);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 0px;
-  margin: 0px;
-}
-
 /*something more about me section*/
 
 #somethingmorecontainer {
@@ -197,23 +140,24 @@ main .background:nth-child(even) {
 
 #somethingmoretext {
   padding: 20px;
+  color: #ffffff;
+  width: calc(100% - 640px);
 }
 
 #somethingmoretext h1 {
   font-size: 4rem;
-  color: #101358;
 }
 
-#somethingmoretext p {
-  color: #101358;
+/* font size and spacing increased to improve readability (the colour match means the white is only easily readable at large sizes) */
+#somethingmoretext ul {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  line-height: 1.3;
 }
 
-.quote {
-  padding-bottom: 10px;
-}
-
-#somethingmoretext em {
-  font-style: italic;
+#somethingmoretext li {
+  margin-bottom: 20px;
 }
 
 /* image carousel */
@@ -234,8 +178,16 @@ main .background:nth-child(even) {
   border: #ffffff 3px solid;
 }
 
+#carousel:hover + #map {
+  display: visible;
+}
+
 #next-button {
-  right: 0;
+  right: -3px;
+}
+
+#previous-button {
+  left: 3px;
 }
 
 #previous-button,
@@ -314,6 +266,62 @@ i {
   cursor: pointer;
 }
 
+#map {
+  display: none;
+  height: 300px;
+  width: 400px;
+  margin: 20px;
+  z-index: 40;
+}
+
+/* why i'm applying */
+#why-container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+#whyfandc h1 {
+  font-size: 4rem;
+  color: #101358;
+  padding-top: 100px;
+  text-align: center;
+  margin: 0;
+}
+
+#whyfandc p {
+  text-align: center;
+  color: #101358;
+  margin: 0;
+  padding: 5px;
+}
+
+#why-text-top p {
+  color: #101358;
+  display: inline;
+}
+
+#why-text-top {
+  column-count: 3;
+  column-gap: 5%;
+  padding: 2%;
+  text-align: justify;
+  column-fill: balance;
+}
+
+#why-img {
+  height: 40vh;
+  width: 100%;
+  background-image: url(../images/ascii.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0px;
+  margin: 0px;
+}
+
 /* external links */
 
 #links h1 {
@@ -344,6 +352,11 @@ i {
   color: #ffffff;
   text-align: center;
   line-height: 2;
+}
+
+#links i:hover {
+  transform: scale(1.5);
+  transition-duration: 0.5s;
 }
 
 #logos {
@@ -415,9 +428,5 @@ i {
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
-  height: 100vh;
-  width: 100vw;
-}
-
-#wave {
+  width: 100%;
 }
