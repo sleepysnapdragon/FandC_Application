@@ -13,6 +13,8 @@ var pics = [];
 pics[0] = new Image();
 pics[1] = new Image();
 pics[2] = new Image();
+pics[3] = new Image();
+pics[4] = new Image();
 var isPausing = false; //the status of stopping the animation: will be false when animation is running or stopped, and true when in the process of finishing animation
 var wait;
 var isPlaying; //true when auto playing
@@ -22,14 +24,21 @@ function load() {
   //get images and check if first is ready
   pics[0].src = "./images/accollo1.jpg";
   pics[1].src = "./images/disagio.jpg";
-  pics[2].src = "./images/accollo2.jpg";
+  pics[2].src = "./images/bagels.jpg";
+  pics[3].src = "./images/lesson.jpg";
+  pics[4].src = "./images/mosaic.jpg";
   isLoaded = setInterval(loadingCheck, 10);
 }
 
 //originally wrote this logic inside load function with onload but it wasn't working as expected
 //when all images are loaded, autoplay starts
 function loadingCheck() {
-  if (pics[0].complete && pics[1].complete && pics[2].complete) {
+  if (
+    pics[0].complete &&
+    pics[1].complete &&
+    pics[2].complete &&
+    pics[3].complete
+  ) {
     clearInterval(isLoaded);
     autoPlay();
   }
@@ -37,17 +46,13 @@ function loadingCheck() {
 
 //auto play through the images
 function autoPlay() {
-  console.log("autoPlay activated");
   isPlaying = true;
-  console.log("inside the picsonload bit");
   context = canvas.getContext("2d");
   context.drawImage(pics[currentSlide], x1, 0, 640, 480);
   repeat = setTimeout(function() {
     if (!isPausing) {
-      console.log("starting transition");
       startTrans();
     } else {
-      console.log("stopping because isPausing was true ie you hit pause");
       isPausing = false; //because now it's fully paused
       isPlaying = false;
     }
@@ -71,19 +76,14 @@ function changePic() {
     x1 -= xt;
     x2 -= xt;
   } else {
-    console.log("pic has fully arrived at end position");
     x1 = 0;
     x2 = 640;
     if (currentSlide + 1 > pics.length - 1) {
       currentSlide = 0;
       if (!isPausing) {
-        console.log("end the trans and start new pic: 1st");
         clearInterval(trns);
         autoPlay();
       } else {
-        console.log(
-          "ending trans and do nothing because it's been paused: 1st"
-        );
         clearInterval(trns);
         isPausing = false;
         isPlaying = false;
@@ -91,13 +91,9 @@ function changePic() {
     } else {
       currentSlide++;
       if (!isPausing) {
-        console.log("end the trans and start new pic: 2nd");
         clearInterval(trns);
         autoPlay();
       } else {
-        console.log(
-          "ending trans and do nothing because it's been paused: 2nd"
-        );
         clearInterval(trns);
         isPausing = false;
         isPlaying = false;
@@ -143,7 +139,7 @@ function showX(x) {
 function next() {
   stopAuto();
   context.clearRect(0, 0, 640, 480);
-  if (currentSlide == 2) {
+  if (currentSlide == pics.length - 1) {
     currentSlide = 0;
   } else {
     currentSlide++;
@@ -156,7 +152,7 @@ function previous() {
   stopAuto();
   context.clearRect(0, 0, 640, 480);
   if (currentSlide == 0) {
-    currentSlide = 2;
+    currentSlide = pics.length - 1;
   } else {
     currentSlide--;
   }
