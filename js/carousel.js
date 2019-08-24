@@ -1,11 +1,27 @@
-var canvasWidth = document.getElementById("canvas").clientWidth;
-var canvasHeight = canvasWidth * 0.75;
-//need code to check if it resizes
+//function for responsive sizing
+var w = window.innerWidth;
+var canvasWidth = w / 2;
+var aspectRatio = 4 / 3;
+var canvasHeight = canvasWidth / aspectRatio;
+
+function setSize() {
+  w = window.innerWidth;
+  canvasWidth = w / 2;
+  canvasHeight = canvasWidth / aspectRatio;
+  canvas.setAttribute("width", canvasWidth);
+  canvas.setAttribute("height", canvasHeight);
+}
+
+//initial set
+setSize();
+
+//resize if window resizes
+window.addEventListener("resize", setSize());
 
 var context;
 var currentSlide = 0;
 x1 = 0;
-x2 = 640;
+x2 = canvasWidth;
 xt = 3;
 var trns;
 var repeat;
@@ -48,7 +64,7 @@ function loadingCheck() {
 function autoPlay() {
   isPlaying = true;
   context = canvas.getContext("2d");
-  context.drawImage(pics[currentSlide], x1, 0, 640, 480);
+  context.drawImage(pics[currentSlide], x1, 0, canvasWidth, canvasHeight);
   repeat = setTimeout(function() {
     if (!isPausing) {
       startTrans();
@@ -68,16 +84,16 @@ function startTrans() {
 
 //increment of repositioning
 function changePic() {
-  context.clearRect(0, 0, 640, 480);
+  context.clearRect(0, 0, canvasWidth, canvasHeight);
   var nextSlide = currentSlide == pics.length - 1 ? 0 : currentSlide + 1;
-  context.drawImage(pics[currentSlide], x1, 0, 640, 480);
-  context.drawImage(pics[nextSlide], x2, 0, 640, 480);
-  if (x1 > -640) {
+  context.drawImage(pics[currentSlide], x1, 0, canvasWidth, canvasHeight);
+  context.drawImage(pics[nextSlide], x2, 0, canvasWidth, canvasHeight);
+  if (x1 > -canvasWidth) {
     x1 -= xt;
     x2 -= xt;
   } else {
     x1 = 0;
-    x2 = 640;
+    x2 = canvasWidth;
     if (currentSlide + 1 > pics.length - 1) {
       currentSlide = 0;
       if (!isPausing) {
@@ -123,14 +139,14 @@ function stopAuto() {
   clearInterval(trns);
   //need to reset initial x values for transition so it's not in the middle if it starts again
   x1 = 0;
-  x2 = 640;
+  x2 = canvasWidth;
   clearTimeout(repeat);
 }
 
 //activated when you click dot
 function showX(x) {
   stopAuto();
-  context.clearRect(0, 0, 640, 480);
+  context.clearRect(0, 0, canvasWidth, canvasHeight);
   currentSlide = x;
   context.drawImage(pics[currentSlide], 0, 0, 640, 480);
 }
@@ -138,25 +154,25 @@ function showX(x) {
 //activated when you click next
 function next() {
   stopAuto();
-  context.clearRect(0, 0, 640, 480);
+  context.clearRect(0, 0, canvasWidth, canvasHeight);
   if (currentSlide == pics.length - 1) {
     currentSlide = 0;
   } else {
     currentSlide++;
   }
-  context.drawImage(pics[currentSlide], 0, 0, 640, 480);
+  context.drawImage(pics[currentSlide], 0, 0, canvasWidth, canvasHeight);
 }
 
 //activated when you click prev
 function previous() {
   stopAuto();
-  context.clearRect(0, 0, 640, 480);
+  context.clearRect(0, 0, canvasWidth, canvasHeight);
   if (currentSlide == 0) {
     currentSlide = pics.length - 1;
   } else {
     currentSlide--;
   }
-  context.drawImage(pics[currentSlide], 0, 0, 640, 480);
+  context.drawImage(pics[currentSlide], 0, 0, canvasWidth, canvasHeight);
 }
 
 //load and start carousel when page is ready

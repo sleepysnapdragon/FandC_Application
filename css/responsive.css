@@ -1,0 +1,176 @@
+/* responsivity for v small devices eg smaller phone */
+/*canvas size 300 (full width)*/
+
+@media only screen and (max-width: 599px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .background {
+    height: auto;
+  }
+
+  /* start page */
+  #start h1 {
+    font-size: 2.5rem;
+  }
+
+  /* why i'm applying page */
+}
+
+/* responsivity for small devices eg portrait tablet or large phone */
+/* carousel app 300px */
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  body {
+    scroll-snap-type: none;
+  }
+
+  /* navbar */
+
+  #small-menu-bar {
+    display: flex;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  #navbarbuttons {
+    display: none;
+  }
+
+  .progress-container {
+    position: fixed;
+    top: 40px;
+    height: 3px;
+  }
+
+  .progress-bar {
+    height: 3px;
+  }
+
+  /* start page */
+
+  #start h1 {
+    font-size: 3rem;
+  }
+  #start p {
+    font-size: 1rem;
+  }
+
+  /* about me page */
+  #aboutmecontainer {
+    flex-flow: column;
+  }
+
+  #aboutmetext {
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+  }
+
+  #aboutmetext h1 {
+    margin: 0px;
+  }
+
+  #aboutmeimagecontainer {
+    flex-flow: row;
+    width: 100%;
+  }
+
+  #aboutmeimageleft {
+    flex-flow: row;
+  }
+
+  #aboutmeimageright {
+    flex-flow: row;
+  }
+
+  #aboutmecontainer div img {
+    width: 50%;
+  }
+
+  /* something more about me */
+
+  #somethingmorerow {
+    flex-direction: column;
+  }
+
+  #somethingmoretext {
+    width: 100%;
+    margin: auto;
+  }
+
+  #somethingmoretext p,
+  #somethingmoretext ul {
+    letter-spacing: 1px;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  /* why I'm applying */
+
+  #why-text-top {
+    column-count: 1;
+  }
+
+  #why-img {
+    height: 30vh;
+  }
+
+  /* links */
+
+  #links h1 {
+    padding-top: 50px;
+  }
+
+  #logos {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #logos a {
+    padding: 15px 0px;
+  }
+
+  #logos img {
+    height: 100px;
+  }
+
+  #links p {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 10px;
+  }
+}
+
+/* responsivity for medium devices eg landscape tablet */
+/* carousel apx 350px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+  #start h1 {
+    font-size: 4rem;
+  }
+
+  #start p {
+    font-size: 1rem;
+  }
+}
+
+/* large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}

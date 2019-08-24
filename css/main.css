@@ -35,6 +35,10 @@ main {
   align-items: center;
 }
 
+#start {
+  height: 100vh;
+}
+
 main .background:nth-child(odd) {
   background-color: #fea49f;
   color: #ffffff;
@@ -55,6 +59,8 @@ main .background:nth-child(even) {
 
 #start p {
   font-size: 1.3rem;
+  text-align: center;
+  padding: 40px;
 }
 
 #start em {
@@ -81,7 +87,7 @@ main .background:nth-child(even) {
 }
 
 #aboutmetext h1 {
-  margin: 0 0 50px 0;
+  margin: 0 0 80px 0;
   text-align: left;
 }
 
@@ -96,20 +102,26 @@ main .background:nth-child(even) {
   font-weight: bold;
 }
 
+#aboutmeimagecontainer {
+  display: flex;
+  flex-flow: row;
+  width: 40%;
+}
+
 #aboutmeimageleft {
-  width: 20%;
+  width: 50%;
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 10px 0 10px 10px;
 }
 
 #aboutmeimageright {
-  width: 20%;
+  width: 50%;
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 10px 0 10px 10px;
 }
 
 #top-left-pic:hover,
@@ -127,7 +139,7 @@ main .background:nth-child(even) {
 #aboutmecontainer div img {
   width: 80%;
   height: auto;
-  padding: 15px;
+  padding: 15px 0 15px 15px;
 }
 
 /*something more about me section*/
@@ -151,7 +163,7 @@ main .background:nth-child(even) {
 #somethingmoretext {
   padding: 20px;
   margin-right: 20px;
-  width: calc(100% - 640px);
+  width: 50%;
 }
 
 /* font size and spacing increased to improve readability (the colour match means the white is only easily readable at large sizes) */
@@ -180,8 +192,6 @@ main .background:nth-child(even) {
 }
 
 #image-carousel {
-  height: 480px;
-  width: 640px;
   position: relative;
   padding: 0px;
 }
@@ -367,7 +377,6 @@ i {
 #logos {
   display: flex;
   flex-flow: row;
-  height: 130px;
   text-align: center;
   margin: 0 auto;
   justify-content: center;
@@ -377,8 +386,6 @@ i {
 
 #logos a {
   margin: 0 auto;
-  height: 130px;
-  width: 130px;
   padding: 0px 30px;
 }
 
@@ -434,46 +441,4 @@ i {
   flex-flow: column;
   justify-content: flex-end;
   width: 100%;
-}
-
-/* responsivity for small devices eg portrait tablet or large phone */
-/* carousel apx 275px */
-@media only screen and (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 0.75rem;
-  }
-
-  #start h1 {
-    font-size: 3rem;
-  }
-  #start p {
-    font-size: 1rem;
-  }
-
-  #why-img {
-    height: 30vh;
-  }
-}
-
-/* responsivity for medium devices eg landscape tablet */
-/* carousel apx 350px */
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 0.75rem;
-  }
-  #start h1 {
-    font-size: 4rem;
-  }
-
-  #start p {
-    font-size: 1rem;
-  }
 }

@@ -41,11 +41,64 @@
   text-decoration: underline;
 }
 
-#open-nav-button {
-  font-size: 36px;
-  padding: 12px;
+#dropdown {
   display: none;
+  font-family: "Roboto", sans-serif;
+  background-color: #101358;
+  position: relative;
+  width: 40%;
+  top: 40px;
+  z-index: 1;
 }
+
+#dropdown a {
+  padding: 10px;
+  color: #eeeeee;
+  text-decoration: none;
+  display: block;
+}
+
+#dropdown a:hover {
+  background-color: #ffe4e0;
+  color: #101358;
+}
+
+#small-menu-bar {
+  display: none;
+  flex-direction: row;
+  position: absolute;
+  background-color: #101358;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  color: #eeeeee;
+  align-items: center;
+}
+
+#small-menu-bar a:hover {
+  cursor: pointer;
+}
+
+#small-menu-bar a h4 {
+  position: absolute;
+  left: 50px;
+  top: 7px;
+  font-family: "Roboto", sans-serif;
+  padding: 5px;
+  margin: auto;
+  font-size: 1rem;
+}
+
+#menu-icon {
+  display: none;
+  position: absolute;
+  color: #eeeeee;
+  top: 0;
+  font-size: 2rem;
+  padding: 4px 8px;
+}
+
+/* progress bar */
 
 .progress-container {
   width: 100%;

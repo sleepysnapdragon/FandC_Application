@@ -3,6 +3,22 @@ window.onscroll = function() {
   navLinkActivate();
 };
 
+function openNav() {
+  var dropdown = document.getElementById("dropdown");
+  if (dropdown.style.display === "block") {
+    dropdown.style.display = "none";
+  } else {
+    dropdown.style.display = "block";
+  }
+}
+
+document.getElementById("main").addEventListener("click", function() {
+  var dropdown = document.getElementById("dropdown");
+  if (dropdown.style.display === "block") {
+    dropdown.style.display = "none";
+  }
+});
+
 function scrollFunction() {
   if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
     document.getElementById("navbarbuttons").style.padding = "10px 10px";

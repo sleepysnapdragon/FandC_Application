@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="./css/navbar.css" />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap"
       rel="stylesheet"
@@ -24,31 +25,45 @@
           <a href="#moreaboutme">MORE ABOUT ME</a>
           <a href="#whyfandc">WHY F&C</a>
           <a href="#links">LINKS</a>
-          <i class="material-icons" id="open-nav-button" onclick="openNavList()"
-            >view_headline</i
-          >
+        </div>
+        <div id="dropdown">
+          <a href="#start">START</a>
+          <a href="#aboutme">ABOUT ME</a>
+          <a href="#moreaboutme">MORE ABOUT ME</a>
+          <a href="#whyfandc">WHY F&C</a>
+          <a href="#links">LINKS</a>
+        </div>
+        <div id="small-menu-bar">
+          <a onclick="openNav()">
+            <i class="material-icons" id="menu-icon">menu</i>
+            <h4>MENU</h4>
+          </a>
         </div>
         <div class="progress-container">
           <div class="progress-bar" id="myBar"></div>
         </div>
       </div>
     </header>
-    <main>
+    <main id="main">
       <section class="background" id="start">
         <h1 id="myname"></h1>
         <p>
-          I'm an aspiring developer currently based in Rome <em>&#x1F35D;</em>
+          I'm an aspiring developer currently based in Rome&#160;<em
+            >&#x1F35D;</em
+          >
         </p>
       </section>
       <section class="background" id="aboutme">
         <div id="aboutmecontainer">
-          <div id="aboutmeimageleft">
-            <img id="top-left-pic" src="./images/polaroid2.jpg" alt="" />
-            <img id="bottom-left-pic" src="./images/polaroid4.jpg" alt="" />
-          </div>
-          <div id="aboutmeimageright">
-            <img id="top-right-pic" src="./images/polaroid3.jpg" alt="" />
-            <img id="bottom-right-pic" src="./images/polaroid1.jpg" alt="" />
+          <div id="aboutmeimagecontainer">
+            <div id="aboutmeimageleft">
+              <img id="top-left-pic" src="./images/polaroid2.jpg" alt="" />
+              <img id="bottom-left-pic" src="./images/polaroid4.jpg" alt="" />
+            </div>
+            <div id="aboutmeimageright">
+              <img id="top-right-pic" src="./images/polaroid3.jpg" alt="" />
+              <img id="bottom-right-pic" src="./images/polaroid1.jpg" alt="" />
+            </div>
           </div>
           <div id="aboutmetext">
             <h1>ABOUT ME</h1>
@@ -130,7 +145,7 @@
             </div>
             <div id="carousel">
               <div id="image-carousel">
-                <canvas id="canvas" width="640px" height="480px"></canvas>
+                <canvas id="canvas"></canvas>
                 <i
                   class="material-icons"
                   id="previous-button"
