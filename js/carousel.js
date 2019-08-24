@@ -1,28 +1,5 @@
-//function for responsive sizing
-var w = window.innerWidth;
-var canvasWidth = w / 2;
-var aspectRatio = 4 / 3;
-var canvasHeight = canvasWidth / aspectRatio;
-
-function setSize() {
-  w = window.innerWidth;
-  canvasWidth = w / 2;
-  canvasHeight = canvasWidth / aspectRatio;
-  canvas.setAttribute("width", canvasWidth);
-  canvas.setAttribute("height", canvasHeight);
-}
-
-//initial set
-setSize();
-
-//resize if window resizes
-window.addEventListener("resize", setSize());
-
 var context;
 var currentSlide = 0;
-x1 = 0;
-x2 = canvasWidth;
-xt = 3;
 var trns;
 var repeat;
 var pics = [];
@@ -36,8 +13,27 @@ var wait;
 var isPlaying; //true when auto playing
 var isLoaded; //true when all images are loaded
 
+//set initial size
+var w = window.innerWidth;
+var canvasWidth = w / 2;
+var aspectRatio = 4 / 3;
+var canvasHeight = canvasWidth / aspectRatio;
+
+//function to resize
+function setSize() {
+  w = window.innerWidth;
+  canvasWidth = w / 2;
+  canvasHeight = canvasWidth / aspectRatio;
+  canvas.setAttribute("width", canvasWidth);
+  canvas.setAttribute("height", canvasHeight);
+}
+
+//resize if window resizes
+window.addEventListener("resize", setSize());
+
 function load() {
   //get images and check if first is ready
+  setSize();
   pics[0].src = "./images/accollo1.jpg";
   pics[1].src = "./images/disagio.jpg";
   pics[2].src = "./images/bagels.jpg";
@@ -64,6 +60,7 @@ function loadingCheck() {
 function autoPlay() {
   isPlaying = true;
   context = canvas.getContext("2d");
+  setSize();
   context.drawImage(pics[currentSlide], x1, 0, canvasWidth, canvasHeight);
   repeat = setTimeout(function() {
     if (!isPausing) {
@@ -82,8 +79,13 @@ function startTrans() {
   }, 10);
 }
 
+x1 = 0;
+x2 = canvasWidth;
+xt = Math.floor(canvasWidth * 0.005);
+
 //increment of repositioning
 function changePic() {
+  setSize();
   context.clearRect(0, 0, canvasWidth, canvasHeight);
   var nextSlide = currentSlide == pics.length - 1 ? 0 : currentSlide + 1;
   context.drawImage(pics[currentSlide], x1, 0, canvasWidth, canvasHeight);

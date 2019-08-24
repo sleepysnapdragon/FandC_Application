@@ -10,6 +10,10 @@
     height: auto;
   }
 
+  #dropdown {
+    width: 60%;
+  }
+
   /* start page */
   #start h1 {
     font-size: 2.5rem;
@@ -81,6 +85,10 @@
     margin: 0px;
   }
 
+  #aboutmetext p {
+    margin: 6px 0px;
+  }
+
   #aboutmeimagecontainer {
     flex-flow: row;
     width: 100%;
@@ -107,13 +115,6 @@
   #somethingmoretext {
     width: 100%;
     margin: auto;
-  }
-
-  #somethingmoretext p,
-  #somethingmoretext ul {
-    letter-spacing: 1px;
-    font-size: 1rem;
-    line-height: 1;
   }
 
   /* why I'm applying */
@@ -154,7 +155,7 @@
 
 /* responsivity for medium devices eg landscape tablet */
 /* carousel apx 350px */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (max-width: 991px) {
   h1 {
     font-size: 2rem;
   }
@@ -169,8 +170,24 @@
   #start p {
     font-size: 1rem;
   }
+
+  /* something more about me */
+  #somethingmoretext p,
+  #somethingmoretext ul {
+    letter-spacing: 1px;
+    font-size: 1rem;
+    line-height: 1;
+  }
 }
 
-/* large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+/* anything 992 or wider will just use 'normal' css */
+
+/* Safari specific selector hack - disables scroll snap as it was causing strange flickering */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  _::-webkit-full-page-media,
+  _:future,
+  :root,
+  body {
+    scroll-snap-type: none;
+  }
 }

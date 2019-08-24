@@ -3,6 +3,7 @@ window.onscroll = function() {
   navLinkActivate();
 };
 
+//function to open nav bar on small screens
 function openNav() {
   var dropdown = document.getElementById("dropdown");
   if (dropdown.style.display === "block") {
@@ -12,6 +13,7 @@ function openNav() {
   }
 }
 
+//function to close small-screen nav bar by clicking anywhere
 document.getElementById("main").addEventListener("click", function() {
   var dropdown = document.getElementById("dropdown");
   if (dropdown.style.display === "block") {
@@ -19,6 +21,7 @@ document.getElementById("main").addEventListener("click", function() {
   }
 });
 
+//function to extend/shrink nav bar on larger pages
 function scrollFunction() {
   if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
     document.getElementById("navbarbuttons").style.padding = "10px 10px";
@@ -166,24 +169,6 @@ function changeLetters() {
       clearTimeout(change);
     }
   }
-}
-
-//functions for map
-function initMap() {
-  var rome = { lat: 41.906314, lng: 12.496595 };
-  var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 10,
-    center: rome,
-    streetViewControl: false,
-    mapTypeControl: false
-  });
-
-  var marker = new google.maps.Marker({
-    position: rome,
-    map: map,
-    icon: "./images/marker.gif",
-    optimization: false
-  });
 }
 
 window.onload = showName();
