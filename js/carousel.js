@@ -12,17 +12,18 @@ var isPausing = false; //the status of stopping the animation: will be false whe
 var wait;
 var isPlaying; //true when auto playing
 var isLoaded; //true when all images are loaded
+const dots = document.getElementsByClassName("dot");
 
-//set initial size
+//set initial size: smaller devices will display as full width under text, larger half width next to text
 var w = window.innerWidth;
-var canvasWidth = w / 2;
+var canvasWidth = w < 768 ? w * 0.7 : (w * 0.8) / 2;
 var aspectRatio = 4 / 3;
 var canvasHeight = canvasWidth / aspectRatio;
 
 //function to resize
 function setSize() {
   w = window.innerWidth;
-  canvasWidth = w / 2;
+  canvasWidth = w < 768 ? w * 0.7 : (w * 0.8) / 2;
   canvasHeight = canvasWidth / aspectRatio;
   canvas.setAttribute("width", canvasWidth);
   canvas.setAttribute("height", canvasHeight);
@@ -35,7 +36,7 @@ function load() {
   //get images and check if first is ready
   setSize();
   pics[0].src = "./images/accollo1.jpg";
-  pics[1].src = "./images/disagio.jpg";
+  pics[1].src = "./images/disagio1.jpg";
   pics[2].src = "./images/bagels.jpg";
   pics[3].src = "./images/lesson.jpg";
   pics[4].src = "./images/mosaic.jpg";
@@ -59,9 +60,14 @@ function loadingCheck() {
 //auto play through the images
 function autoPlay() {
   isPlaying = true;
+  document.getElementById("play-button").classList.add("clicked");
   context = canvas.getContext("2d");
   setSize();
+  for (var i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("autoplay-current");
+  }
   context.drawImage(pics[currentSlide], x1, 0, canvasWidth, canvasHeight);
+  dots[currentSlide].classList.add("autoplay-current");
   repeat = setTimeout(function() {
     if (!isPausing) {
       startTrans();
@@ -125,6 +131,11 @@ function restartAuto() {
     return; //to avoid re-running autoPlay if it's already running
   } else {
     autoPlay();
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("clicked");
+    }
+    document.getElementById("pause-button").classList.remove("clicked");
+    document.getElementById("play-button").classList.add("clicked");
   }
 }
 
@@ -132,12 +143,22 @@ function restartAuto() {
 function pauseAuto() {
   if (isPlaying) {
     isPausing = true;
+    document.getElementById("play-button").classList.remove("clicked");
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("autoplay-current");
+    }
+    document.getElementById("pause-button").classList.add("clicked");
   }
 }
 
 //activated by clicking next/previous/dots (sudden change: doesn't wait for transition if in progress)
 function stopAuto() {
   isPlaying = false;
+  document.getElementById("play-button").classList.remove("clicked");
+  document.getElementById("pause-button").classList.add("clicked");
+  for (var i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("autoplay-current");
+  }
   clearInterval(trns);
   //need to reset initial x values for transition so it's not in the middle if it starts again
   x1 = 0;
@@ -150,31 +171,44 @@ function showX(x) {
   stopAuto();
   context.clearRect(0, 0, canvasWidth, canvasHeight);
   currentSlide = x;
-  context.drawImage(pics[currentSlide], 0, 0, 640, 480);
+  context.drawImage(pics[currentSlide], 0, 0, canvasWidth, canvasHeight);
+  for (var i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("clicked");
+  }
+  dots[x].classList.add("clicked");
 }
 
 //activated when you click next
 function next() {
   stopAuto();
   context.clearRect(0, 0, canvasWidth, canvasHeight);
+  for (var i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("clicked");
+  }
+  //document.getElementById("next-button").add("clicked");
   if (currentSlide == pics.length - 1) {
     currentSlide = 0;
   } else {
     currentSlide++;
   }
   context.drawImage(pics[currentSlide], 0, 0, canvasWidth, canvasHeight);
+  dots[currentSlide].classList.add("clicked");
 }
 
 //activated when you click prev
 function previous() {
   stopAuto();
   context.clearRect(0, 0, canvasWidth, canvasHeight);
+  for (var i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("clicked");
+  }
   if (currentSlide == 0) {
     currentSlide = pics.length - 1;
   } else {
     currentSlide--;
   }
   context.drawImage(pics[currentSlide], 0, 0, canvasWidth, canvasHeight);
+  dots[currentSlide].classList.add("clicked");
 }
 
 //load and start carousel when page is ready

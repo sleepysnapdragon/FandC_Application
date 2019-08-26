@@ -203,7 +203,7 @@ main .background:nth-child(even) {
 }
 
 #next-button {
-  right: -3px;
+  right: 3px;
 }
 
 #previous-button {
@@ -214,34 +214,37 @@ main .background:nth-child(even) {
 #next-button {
   position: absolute;
   top: 50%;
-  transform: translate();
   color: #ffffff;
   font-size: 50px;
 }
 
 #previous-button:hover {
-  background-color: rgba(140, 140, 140, 0.8);
+  background-color: rgba(6, 7, 35, 0.8);
   transition: 0.6s ease;
   border-radius: 0 8px 8px 0;
 }
 
 #next-button:hover {
-  background-color: rgba(140, 140, 140, 0.8);
+  background-color: rgba(6, 7, 35, 0.8);
   transition: 0.6s ease;
   border-radius: 8px 0 0 8px;
 }
 
 #play-button:hover,
 #pause-button:hover {
-  background-color: rgba(140, 140, 140, 0.8);
+  background-color: rgba(6, 7, 35, 0.8);
   transition: 0.6s ease;
   border-radius: 8px;
 }
 
 .dot:hover {
-  background-color: rgba(140, 140, 140, 0.8);
+  background-color: rgba(6, 7, 35, 0.8);
   transition: 0.6s ease;
   border: none;
+}
+
+.dot.clicked {
+  background-color: #101358;
 }
 
 .dots {
@@ -261,6 +264,10 @@ main .background:nth-child(even) {
   background-color: #ffffff;
 }
 
+.dot.autoplay-current {
+  background-color: #777777;
+}
+
 #play-button {
   position: absolute;
   bottom: 5%;
@@ -269,12 +276,22 @@ main .background:nth-child(even) {
   font-size: 50px;
 }
 
+#play-button.clicked {
+  background-color: #101358;
+  border-radius: 8px;
+}
+
 #pause-button {
   position: absolute;
   bottom: 5%;
   left: 3%;
   color: #ffffff;
   font-size: 50px;
+}
+
+#pause-button.clicked {
+  background-color: #101358;
+  border-radius: 8px;
 }
 
 .active i {

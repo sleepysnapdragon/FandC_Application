@@ -23,7 +23,6 @@
 }
 
 /* responsivity for small devices eg portrait tablet or large phone */
-/* carousel app 300px */
 @media only screen and (max-width: 767px) {
   h1 {
     font-size: 1.5rem;
@@ -117,6 +116,18 @@
     margin: auto;
   }
 
+  #previous-button,
+  #next-button,
+  #play-button,
+  #pause-button {
+    font-size: 30px;
+  }
+
+  .dot {
+    height: 7px;
+    width: 7px;
+  }
+
   /* why I'm applying */
 
   #why-text-top {
@@ -154,7 +165,6 @@
 }
 
 /* responsivity for medium devices eg landscape tablet */
-/* carousel apx 350px */
 @media only screen and (max-width: 991px) {
   h1 {
     font-size: 2rem;
@@ -177,6 +187,18 @@
     letter-spacing: 1px;
     font-size: 1rem;
     line-height: 1;
+  }
+
+  #previous-button,
+  #next-button,
+  #play-button,
+  #pause-button {
+    font-size: 40px;
+  }
+
+  .dot {
+    height: 9px;
+    width: 9px;
   }
 }
 
