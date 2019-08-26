@@ -19,7 +19,13 @@
     font-size: 2.5rem;
   }
 
-  /* why i'm applying page */
+  /* more about me */
+  #previous-button.material-icons,
+  #next-button.material-icons,
+  #play-button.material-icons,
+  #pause-button.material-icons {
+    font-size: 20px;
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -129,18 +135,6 @@
     padding: 10px;
   }
 
-  #previous-button,
-  #next-button,
-  #play-button,
-  #pause-button {
-    font-size: 30px;
-  }
-
-  .dot {
-    height: 7px;
-    width: 7px;
-  }
-
   /* why I'm applying */
 
   #why-text-top {
@@ -177,6 +171,20 @@
   }
 }
 
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+  #previous-button,
+  #next-button,
+  #play-button,
+  #pause-button {
+    font-size: 30px;
+  }
+
+  .dot {
+    height: 7px;
+    width: 7px;
+  }
+}
+
 /* responsivity for medium devices eg landscape tablet */
 @media only screen and (max-width: 991px) {
   h1 {
@@ -202,16 +210,18 @@
     line-height: 1;
   }
 
+  .dot {
+    height: 9px;
+    width: 9px;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
   #previous-button,
   #next-button,
   #play-button,
   #pause-button {
     font-size: 40px;
-  }
-
-  .dot {
-    height: 9px;
-    width: 9px;
   }
 }
 
