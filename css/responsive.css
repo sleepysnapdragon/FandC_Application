@@ -22,6 +22,12 @@
   /* why i'm applying page */
 }
 
+@media only screen and (max-width: 450px) {
+  #aboutmeimagecontainer {
+    display: none;
+  }
+}
+
 /* responsivity for small devices eg portrait tablet or large phone */
 @media only screen and (max-width: 767px) {
   h1 {
@@ -72,11 +78,12 @@
   /* about me page */
   #aboutmecontainer {
     flex-flow: column;
+    margin: 20px 0 0 0;
   }
 
   #aboutmetext {
-    width: 100%;
-    padding: 10px;
+    width: 95%;
+    padding: 5px;
     margin: auto;
   }
 
@@ -91,6 +98,7 @@
   #aboutmeimagecontainer {
     flex-flow: row;
     width: 100%;
+    justify-content: center;
   }
 
   #aboutmeimageleft {
@@ -102,7 +110,7 @@
   }
 
   #aboutmecontainer div img {
-    width: 50%;
+    width: 40%;
   }
 
   /* something more about me */
@@ -112,8 +120,13 @@
   }
 
   #somethingmoretext {
-    width: 100%;
+    width: 95%;
     margin: auto;
+    padding: 5px;
+  }
+
+  #carousel {
+    padding: 10px;
   }
 
   #previous-button,
@@ -203,6 +216,15 @@
 }
 
 /* anything 992 or wider will just use 'normal' css */
+@media only screen and (max-width: 1200px) {
+  #aboutme h1 {
+    font-size: 2rem;
+  }
+
+  #aboutme p {
+    font-size: 0.8rem;
+  }
+}
 
 /* Safari specific selector hack - disables scroll snap as it was causing strange flickering */
 @media screen and (-webkit-min-device-pixel-ratio: 0) {

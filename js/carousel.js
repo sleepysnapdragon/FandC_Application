@@ -16,14 +16,14 @@ const dots = document.getElementsByClassName("dot");
 
 //set initial size: smaller devices will display as full width under text, larger half width next to text
 var w = window.innerWidth;
-var canvasWidth = w < 768 ? w * 0.7 : (w * 0.8) / 2;
+var canvasWidth = w < 768 ? w * 0.6 : (w * 0.8) / 2;
 var aspectRatio = 4 / 3;
 var canvasHeight = canvasWidth / aspectRatio;
 
 //function to resize
 function setSize() {
   w = window.innerWidth;
-  canvasWidth = w < 768 ? w * 0.7 : (w * 0.8) / 2;
+  canvasWidth = w < 768 ? w * 0.6 : (w * 0.8) / 2;
   canvasHeight = canvasWidth / aspectRatio;
   canvas.setAttribute("width", canvasWidth);
   canvas.setAttribute("height", canvasHeight);

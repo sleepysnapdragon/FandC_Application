@@ -110,7 +110,7 @@
 
 .progress-bar {
   height: 5px;
-  background: #8a0010;
+  background: #bbbbbb;
   width: 0%;
   transition: 0.75s;
   width: 10%;
