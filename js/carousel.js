@@ -7,6 +7,7 @@ pics[0] = new Image();
 pics[1] = new Image();
 pics[2] = new Image();
 pics[3] = new Image();
+pics[4] = new Image();
 var isPausing = false; //the status of stopping the animation: will be false when animation is running or stopped, and true when in the process of finishing animation
 var wait;
 var isPlaying; //true when auto playing
@@ -38,6 +39,7 @@ function load() {
   pics[1].src = "./images/disagio1.jpg";
   pics[2].src = "./images/bagels.jpg";
   pics[3].src = "./images/mosaic.jpg";
+  pics[4].src = "./images/yoga.jpg";
   isLoaded = setInterval(loadingCheck, 10);
 }
 
@@ -48,7 +50,8 @@ function loadingCheck() {
     pics[0].complete &&
     pics[1].complete &&
     pics[2].complete &&
-    pics[3].complete
+    pics[3].complete &&
+    pics[4].complete
   ) {
     clearInterval(isLoaded);
     autoPlay();
