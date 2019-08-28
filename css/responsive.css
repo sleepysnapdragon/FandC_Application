@@ -233,9 +233,9 @@
   }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 360px) {
   #aboutme.background {
-    height: 180vh;
+    height: 130vh;
   }
 
   #somethingmoretext p,
