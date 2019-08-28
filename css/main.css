@@ -61,6 +61,15 @@ main .background:nth-child(even) {
   font-size: 1.3rem;
   text-align: center;
   padding: 40px;
+  opacity: 0;
+  animation: fadein 1s ease-in-out 1 normal forwards;
+  animation-delay: 3.3s;
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
 }
 
 #start em {
@@ -106,6 +115,8 @@ main .background:nth-child(even) {
   display: flex;
   flex-flow: row;
   width: 40%;
+  align-items: center;
+  justify-content: center;
 }
 
 #aboutmeimageleft {
@@ -136,10 +147,16 @@ main .background:nth-child(even) {
   transition: 0.3s ease;
 }
 
-#aboutmecontainer div img {
+.aboutmepic {
   width: 80%;
   height: auto;
-  padding: 15px 0 15px 15px;
+  padding: 15px;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.in-view {
+  opacity: 1;
 }
 
 /*something more about me section*/
@@ -336,10 +353,6 @@ i {
   display: inline;
 }
 
-#why-text-top strong {
-  /* ideas? */
-}
-
 #why-img {
   height: 40vh;
   width: 100%;
@@ -400,6 +413,15 @@ i {
   justify-content: center;
   align-items: center;
   padding: 60px;
+}
+
+.logo {
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.logo.in-view {
+  opacity: 1;
 }
 
 #logos a {

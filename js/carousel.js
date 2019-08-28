@@ -85,7 +85,7 @@ function startTrans() {
 
 x1 = 0;
 x2 = canvasWidth;
-xt = Math.floor(canvasWidth * 0.005);
+xt = Math.floor(canvasWidth * 0.005) > 0 ? Math.floor(canvasWidth * 0.005) : 1;
 
 //increment of repositioning
 function changePic() {

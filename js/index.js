@@ -3,8 +3,12 @@ window.onscroll = function() {
   navLinkActivate();
 };
 
+window.addEventListener("load", imageAnimate);
+window.addEventListener("scroll", imageAnimate);
+window.addEventListener("resize", imageAnimate);
+
 //function to open nav bar on small screens
-function openNav() {
+function toggleNav() {
   var dropdown = document.getElementById("dropdown");
   if (dropdown.style.display === "block") {
     dropdown.style.display = "none";
@@ -167,6 +171,38 @@ function changeLetters() {
       showName();
     } else {
       clearTimeout(change);
+    }
+  }
+}
+
+//fn to check if images are mostly in view to start animation effect
+function isElemInView(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.top + rect.height * 0.75 <=
+      (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+/* start animation effect */
+const images = document.querySelectorAll(".aboutmepic");
+const logos = document.querySelectorAll(".logo");
+
+function imageAnimate() {
+  for (var i = 0; i < images.length; i++) {
+    if (isElemInView(images[i])) {
+      images[i].classList.add("in-view");
+    } else {
+      images[i].classList.remove("in-view");
+    }
+  }
+  for (var i = 0; i < logos.length; i++) {
+    if (isElemInView(logos[i])) {
+      logos[i].classList.add("in-view");
+    } else {
+      logos[i].classList.remove("in-view");
     }
   }
 }

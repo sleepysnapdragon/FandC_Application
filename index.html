@@ -27,15 +27,16 @@
           <a href="#whyfandc">WHY F&C</a>
           <a href="#links">LINKS</a>
         </div>
+        <!--Nav Bar for small screens-->
         <div id="dropdown">
-          <a href="#start">START</a>
-          <a href="#aboutme">ABOUT ME</a>
-          <a href="#moreaboutme">MORE ABOUT ME</a>
-          <a href="#whyfandc">WHY F&C</a>
-          <a href="#links">LINKS</a>
+          <a href="#start" onclick="toggleNav()">START</a>
+          <a href="#aboutme" onclick="toggleNav()">ABOUT ME</a>
+          <a href="#moreaboutme" onclick="toggleNav()">MORE ABOUT ME</a>
+          <a href="#whyfandc" onclick="toggleNav()">WHY F&C</a>
+          <a href="#links" onclick="toggleNav()">LINKS</a>
         </div>
         <div id="small-menu-bar">
-          <a onclick="openNav()">
+          <a onclick="toggleNav()">
             <i class="material-icons" id="menu-icon">menu</i>
             <h4>MENU</h4>
           </a>
@@ -48,7 +49,7 @@
     <main id="main">
       <section class="background" id="start">
         <h1 id="myname"></h1>
-        <p>
+        <p id="subtitle">
           I'm an aspiring developer currently based in Rome&#160;<em
             >&#x1F35D;</em
           >
@@ -58,12 +59,32 @@
         <div id="aboutmecontainer">
           <div id="aboutmeimagecontainer">
             <div id="aboutmeimageleft">
-              <img id="top-left-pic" src="./images/polaroid2.jpg" alt="" />
-              <img id="bottom-left-pic" src="./images/polaroid4.jpg" alt="" />
+              <img
+                class="aboutmepic"
+                id="top-left-pic"
+                src="./images/polaroid2.jpg"
+                alt=""
+              />
+              <img
+                class="aboutmepic"
+                id="bottom-left-pic"
+                src="./images/polaroid4.jpg"
+                alt=""
+              />
             </div>
             <div id="aboutmeimageright">
-              <img id="top-right-pic" src="./images/polaroid3.jpg" alt="" />
-              <img id="bottom-right-pic" src="./images/polaroid1.jpg" alt="" />
+              <img
+                class="aboutmepic"
+                id="top-right-pic"
+                src="./images/polaroid3.jpg"
+                alt=""
+              />
+              <img
+                class="aboutmepic"
+                id="bottom-right-pic"
+                src="./images/polaroid1.jpg"
+                alt=""
+              />
             </div>
           </div>
           <div id="aboutmetext">
@@ -154,7 +175,6 @@
                   <span class="dot" onclick="showX(1)"></span>
                   <span class="dot" onclick="showX(2)"></span>
                   <span class="dot" onclick="showX(3)"></span>
-                  <span class="dot" onclick="showX(4)"></span>
                 </div>
                 <i
                   class="material-icons"
@@ -178,24 +198,22 @@
           <h1>WHY I'M APPLYING</h1>
           <div id="why-text-top">
             <p>
-              I'm applying to Founders and Coders because I want to
-              <strong>learn</strong>, because the
-              <strong>collaborative</strong> style appeals to me, and because of
-              its policy of <strong>inclusivity</strong>. I have largely been
-              studying by myself, as there is not much of a learner meet-ups
-              community in Rome. I would like to learn how to work on projects
-              in teams, as I think this is fundamental for professional coding,
-              and I think that people produce better results when they work
-              together. This was something I really enjoyed about Codewars:
-              seeing the solutions of other users when you solve a challenge was
-              a great way of learning from the different knowledge and style of
-              others. On inclusivity: a few years ago I was struck by an
-              observation that, although it affects us all, the digital future
-              is being designed and built by a small, unrepresentative group.
-              Unless the tech sector strives to be as inclusive as possible, it
-              is inadvertantly disenfranchising many people. I hope that in
-              improving my own technical skills, I will be able to help others
-              too.
+              I'm applying to Founders and Coders because I want to learn,
+              because the collaborative style appeals to me, and because of its
+              policy of inclusivity. I have largely been studying by myself, as
+              there is not much of a learner meet-ups community in Rome. I would
+              like to learn how to work on projects in teams, as I think this is
+              fundamental for professional coding, and I think that people
+              produce better results when they work together. This was something
+              I really enjoyed about Codewars: seeing the solutions of other
+              users when you solve a challenge was a great way of learning from
+              the different knowledge and style of others. On inclusivity: a few
+              years ago I was struck by an observation that, although it affects
+              us all, the digital future is being designed and built by a small,
+              unrepresentative group. Unless the tech sector strives to be as
+              inclusive as possible, it is inadvertantly disenfranchising many
+              people. I hope that in improving my own technical skills, I will
+              be able to help others too.
             </p>
           </div>
           <div id="why-img"></div>
@@ -205,16 +223,20 @@
         </div>
       </section>
       <section class="background" id="links">
-        <h1>LINKS</h1>
         <div id="links-container">
+          <h1>LINKS</h1>
           <div id="logos">
-            <a href="https://github.com/sleepysnapdragon/FandC_Application"
+            <a
+              class="logo"
+              href="https://github.com/sleepysnapdragon/FandC_Application"
               ><img src="./images/logos/github.png" alt=""
             /></a>
-            <a href="https://www.freecodecamp.org/sleepysnapdragon"
+            <a class="logo" href="https://www.freecodecamp.org/sleepysnapdragon"
               ><img src="./images/logos/BW_fcc.png" alt=""
             /></a>
-            <a href="https://www.codewars.com/users/sleepysnapdragon"
+            <a
+              class="logo"
+              href="https://www.codewars.com/users/sleepysnapdragon"
               ><img src="./images/logos/codewars.jpg" alt=""
             /></a>
           </div>

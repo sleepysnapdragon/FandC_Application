@@ -5,6 +5,18 @@
   width: 100%;
   top: 0;
   z-index: 99;
+  transform: translate(0px, -100%);
+  animation: appear 1.2s ease-in-out 1 normal forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes appear {
+  0% {
+    transform: translate(0px, -100%);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
 
 #navbarbuttons {
