@@ -212,5 +212,17 @@ function previous() {
   dots[currentSlide].classList.add("clicked");
 }
 
+//respond to keyboard commands - activate 'next' and 'previous' functions
+window.addEventListener("keydown", keyboard);
+
+function keyboard(input) {
+  console.log("triggered");
+  if (input.keyCode == 37) {
+    previous();
+  } else if (input.keyCode == 39) {
+    next();
+  }
+}
+
 //load and start carousel when page is ready
 window.onload = load();
